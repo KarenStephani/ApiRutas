@@ -1,0 +1,68 @@
+name: .NET 8 API CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Paso 1: Chequear el código
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      # Paso 2: Configurar .NET SDK 8
+      - name: Set up .NET 8
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      # Paso 3: Restaurar las dependencias
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # Paso 4: Construir el proyecto
+      - name: Build the project
+        run: dotnet build --configuration Release
+
+      # Paso 5: Ejecutar las pruebas
+      - name: Run tests
+        run: dotnet test --configuration Release
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      # Paso 1: Chequear el código
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      # Paso 2: Configurar .NET SDK 8
+      - name: Set up .NET 8
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      # Paso 3: Publicar la aplicación
+      - name: Publish application
+        run: dotnet publish --configuration Release --output ./publish
+
+      # Paso 4: Desplegar la API en el servidor (ejemplo con SSH)
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v0.1.9
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          source: "./publish/*"
+          target: "/var/www/ApiRutas"
+
