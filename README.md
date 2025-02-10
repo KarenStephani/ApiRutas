@@ -1,13 +1,13 @@
-# API para Calcular la Ruta M�s Corta entre Dos Ciudades
+# API para Calcular la Ruta Más Corta entre Dos Ciudades
 
-## Descripci�n General
+## Descripción General
 
-Este API permite calcular la ruta m�s corta entre dos ciudades en funci�n de las conexiones viales dadas. Utiliza un algoritmo de b�squeda de rutas:  Dijkstra, para encontrar el camino m�s eficiente entre los puntos de inicio y destino.
+Este API permite calcular la ruta más corta entre dos ciudades en función de las conexiones viales dadas. Utiliza un algoritmo de búsqueda de rutas:  Dijkstra, para encontrar el camino más eficiente entre los puntos de inicio y destino.
 
 ### Funcionalidades principales:
-- Calcular la ruta m�s corta entre dos ciudades.
+- Calcular la ruta más corta entre dos ciudades.
 - Retornar la distancia total de la ruta.
-- Retornar las ciudades por las que pasa la ruta m�s corta.
+- Retornar las ciudades por las que pasa la ruta más corta.
 
 ---
 
