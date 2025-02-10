@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiRutas", "ApiRutas\ApiRutas.csproj", "{8F00E085-CAF0-4EB3-B0E7-B253F743A9EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiRutas.Tests", "ApiRutas.Tests\ApiRutas.Tests.csproj", "{9A0723BF-9CED-440E-A12C-920417A780AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8F00E085-CAF0-4EB3-B0E7-B253F743A9EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F00E085-CAF0-4EB3-B0E7-B253F743A9EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F00E085-CAF0-4EB3-B0E7-B253F743A9EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A0723BF-9CED-440E-A12C-920417A780AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A0723BF-9CED-440E-A12C-920417A780AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A0723BF-9CED-440E-A12C-920417A780AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A0723BF-9CED-440E-A12C-920417A780AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
