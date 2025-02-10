@@ -1,0 +1,6 @@
+@ApiRutas_HostAddress = http://localhost:5273
+
+GET {{ApiRutas_HostAddress}}/Route/
+Accept: application/json
+
+###
